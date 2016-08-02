@@ -10,12 +10,11 @@ public class VendingMachine {
         if (amount == 0) {
             return "INSERT COIN";
         } else {
-            return "25 CENTS";
+            return String.format("%d CENTS", amount);
         }
     }
 
     public void enter(Coin c) {
         amount += 25;
     }
-
 }
