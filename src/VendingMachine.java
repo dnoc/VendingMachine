@@ -1,6 +1,21 @@
 
 public class VendingMachine {
-    public String getDisplay() {
-        return "INSERT COIN";
+    int amount;
+
+    public VendingMachine() {
+        amount = 0;
     }
+
+    public String getDisplay() {
+        if (amount == 0) {
+            return "INSERT COIN";
+        } else {
+            return "25 CENTS";
+        }
+    }
+
+    public void enter(Coin c) {
+        amount += 25;
+    }
+
 }

@@ -16,4 +16,10 @@ public class VendingMachineTest {
         assertEquals(vendingMachine.getDisplay(), "INSERT COIN");
     }
 
+    @Test
+    public void whenAQuarterIsEnteredTheDisplayReads25Cents() {
+        vendingMachine.enter(Coin.QUARTER);
+        assertEquals(vendingMachine.getDisplay(), "25 CENTS");
+    }
+
 }
