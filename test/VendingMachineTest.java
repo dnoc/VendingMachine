@@ -22,4 +22,22 @@ public class VendingMachineTest {
         assertEquals(vendingMachine.getDisplay(), "25 CENTS");
     }
 
+    @Test
+    public void whenADimeIsEnteredTheDisplayReads10Cents() {
+        vendingMachine.enter(Coin.DIME);
+        assertEquals(vendingMachine.getDisplay(), "10 CENTS");
+    }
+
+    @Test
+    public void whenANickelIsEnteredTheDisplayReads5Cents() {
+        vendingMachine.enter(Coin.NICKEL);
+        assertEquals(vendingMachine.getDisplay(), "5 CENTS");
+    }
+
+    @Test
+    public void whenAPennyIsEnteredTheDisplayReadsInsertCoins() {
+        vendingMachine.enter(Coin.PENNY);
+        assertEquals(vendingMachine.getDisplay(), "INSERT COIN");
+    }
+
 }
