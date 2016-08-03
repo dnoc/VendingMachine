@@ -8,11 +8,16 @@ public class VendingMachine {
 
     public VendingMachine() {
         amount = 0;
-        coinValueMap = new HashMap<>();
+        this.coinValueMap = initializeCoinValueMap();
+    }
+
+    private Map<Coin, Integer> initializeCoinValueMap() {
+        Map<Coin, Integer> coinValueMap = new HashMap<>();
         coinValueMap.put(Coin.QUARTER, 25);
         coinValueMap.put(Coin.DIME, 10);
         coinValueMap.put(Coin.NICKEL, 5);
         coinValueMap.put(Coin.PENNY, NOT_ACCEPTED);
+        return coinValueMap;
     }
 
     public String getDisplay() {
