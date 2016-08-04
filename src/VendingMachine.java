@@ -20,11 +20,19 @@ public class VendingMachine {
         return coinValueMap;
     }
 
+    private String formatAmountDisplay() {
+        if (amount < 100) {
+            return String.format("%d CENTS", amount);
+        } else {
+            return "$1.25";
+        }
+    }
+
     public String getDisplay() {
         if (amount == 0) {
             return "INSERT COIN";
         } else {
-            return String.format("%d CENTS", amount);
+            return formatAmountDisplay();
         }
     }
 

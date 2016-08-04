@@ -45,4 +45,14 @@ public class MoneyTest {
         assertEquals(vendingMachine.enter(Coin.PENNY), false);
     }
 
+    @Test
+    public void when5QuartersAreEnteredTheDisplayReads1Dollar25Cents() {
+        vendingMachine.enter(Coin.QUARTER);
+        vendingMachine.enter(Coin.QUARTER);
+        vendingMachine.enter(Coin.QUARTER);
+        vendingMachine.enter(Coin.QUARTER);
+        vendingMachine.enter(Coin.QUARTER);
+        assertEquals(vendingMachine.getDisplay(), "$1.25");
+    }
+
 }
