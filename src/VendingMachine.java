@@ -28,7 +28,12 @@ public class VendingMachine {
         }
     }
 
-    public void enter(Coin c) {
+    public boolean enter(Coin c) {
+        boolean accepted = true;
+        if (c == Coin.PENNY) {
+            accepted = false;
+        }
         amount += coinValueMap.get(c);
+        return accepted;
     }
 }

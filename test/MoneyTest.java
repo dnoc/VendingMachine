@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class VendingMachineTest {
+public class MoneyTest {
     VendingMachine vendingMachine;
 
     @Before
@@ -38,6 +38,11 @@ public class VendingMachineTest {
     public void whenAPennyIsEnteredTheDisplayReadsInsertCoins() {
         vendingMachine.enter(Coin.PENNY);
         assertEquals(vendingMachine.getDisplay(), "INSERT COIN");
+    }
+
+    @Test
+    public void whenAPennyIsEnteredThePennyIsReturned() {
+        assertEquals(vendingMachine.enter(Coin.PENNY), false);
     }
 
 }
