@@ -44,4 +44,8 @@ public class VendingMachine {
         amount += coinValueMap.get(c);
         return accepted;
     }
+
+    public void selectProduct(Product product) {
+
+    }
 }
